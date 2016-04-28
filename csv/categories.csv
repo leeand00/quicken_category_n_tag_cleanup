@@ -1,0 +1,211 @@
+Category,count
+,122
+--Split--,40
+3d Printing,7
+3d Printing:Filament,1
+3d Printing:Heat Sync Compound,1
+3d Printing:kaptontape,1
+Appliances,1
+Appliances:microwave,1
+Auto,4
+Auto:AAA,2
+Auto:Brake Fluid,1
+Auto:Drivers License Renewal,2
+Auto:ew,1
+Auto:Fuel,150
+Auto:GPS,2
+Auto:Insurance,9
+Auto:Oil Change,2
+Auto:Parts,2
+Auto:PennDot,9
+Auto:Registration,2
+Auto:Service,17
+Auto:ticket,1
+Auto:ticket:raghda,3
+Auto:ticket:raghda:clothes,2
+Auto:ticket:raghda:education,1
+Auto:ticket:raghda:healthcare,2
+Auto:ticket:raghda:personal care,1
+Auto:ticket:raghda:personal care:hair,1
+Auto:ticket:raghda:subscription,1
+Auto:tires,1
+Auto:Windsheild Wipers,1
+Bank Charge,16
+Book,3
+Cash,43
+Category,1
+Charity,3
+Checks,1
+Clothing,13
+Clothing:Gloves,1
+Clothing:Raghda,4
+Clothing:Raghda:Shoes,1
+Clothing:Shoes,1
+Clothing:Theo,2
+Clothing:Theo:Shoes,1
+Coffee,300
+Computer,91
+Computer:Antivirus,1
+Computer:Books,8
+Computer:gps,1
+Computer:hardware:mouse,1
+Computer:hardware:ram,2
+Computer:iPhone:apps,1
+Computer:iPhone:Cable,1
+Computer:iPhone:Case,1
+Computer:MacPro,1
+Computer:MacPro:Computer,1
+Computer:MacPro:Computer:hdd,1
+Computer:MacPro:Computer:HDD Drive Slides,1
+Computer:MacPro:Computer:SDD Drive Slides,1
+Computer:MacPro:RAM,2
+Computer:MacPro:RAM:warranty,2
+Computer:MacPro:Shipping,1
+Computer:Media,1
+Computer:paste,2
+Computer:PI:sddrive,1
+Computer:printer,1
+Computer:printer:cartrige,1
+Computer:printer:paper,1
+Computer:Raghda,2
+Computer:Software,7
+Computer:Software:Windows,3
+Computer:thumbdrive,1
+CourtCosts:Magdoulin,1
+Dining,353
+Education,24
+Education:Book Keeping,2
+Education:Nutrition,1
+Education:Raghda,10
+Entertainment,122
+exercise,4
+furniture,4
+furniture:bed:boxspring,1
+furniture:bed:mattress,1
+Gift Received,11
+Gifts Given,1
+Groceries,598
+Groceries:Juice,1
+Groceries:vitamins,1
+Halloween,1
+Home Repair,1
+Home Repair:Tools,8
+Household,35
+Household:airconditioner,4
+Household:Basement Floor,3
+Household:Britta,1
+Household:BugRepleant,1
+Household:Decorations,1
+Household:Dental,3
+Household:Drapes,1
+Household:Family Photos,2
+Household:Fan,1
+Household:furniture,7
+Household:humidifier,2
+Household:kitchen,2
+Household:Large Broom,1
+Household:Magdoulin,1
+Household:Office,11
+Household:Office:labels,1
+Household:Organizing,1
+Household:Picture Frames,3
+Household:Radon,1
+Household:Rug,2
+Household:Salt,2
+Household:Snow Shovels,1
+Immigration,13
+Insurance,12
+Insurance:Health Insurance,18
+Insurance:Home Insurance,1
+Interest Exp,78
+Interest Inc,29
+Invest Inc,1
+Job Search,2
+Magazines,30
+Medical:Allergies,5
+Medical:Cold,7
+Medical:Doctor,21
+Medical:ENT,1
+Medical:Magdoulin,2
+Medical:Medicine,11
+Medical:Pregency,8
+Medical:Raghda,4
+Medical:Teeth,13
+Membership,2
+Misc,175
+Misc Expenses,3
+Misc:raghda,8
+MyMST3K,5
+NotMyMoney,1
+NotMyMoney:Raghda,7
+Personal Care,16
+Personal Care:Andy:haircut,2
+Personal Care:Glasses,1
+Personal Care:Raghda:Hair,1
+Prusa i3,51
+Prusa i3:Electrical Connectors,3
+Prusa i3:Fuse,1
+Prusa i3:PlugNSwitch,1
+Purse,1
+Rent,34
+Rent:Security Deposit,1
+Salary,86
+Shipping,2
+Skype,1
+Subscriptions,12
+Tax,2
+Tax Refund,6
+Tax Related,1
+Tax:Fed,4
+Tax:Local:Occupational,1
+Tax:Other,1
+Tax:State,1
+Theo,5
+Theo:bottle,1
+Theo:childproofing,2
+Theo:clothes,3
+Theo:crib,1
+Theo:health,3
+Theo:sheets,5
+Theo:toybox,1
+Theo:toys,1
+Travel,2
+Travel:ezpass,5
+Travel:Magdoulin,1
+Travel:parking,4
+Utilities,11
+Utilities:Garbage & Recycling,3
+Utilities:Gas & Electric,38
+Utilities:Internet,47
+Utilities:Service Charge,2
+Utilities:Sewage,26
+Utilities:Telephone,72
+Utilities:Water,6
+Vacation,6
+Vacation:Attractions,1
+Vacation:Lodging,10
+Vacation:Travel,18
+Vacation:Travel:Raghda,11
+visa payment,5
+Wedding,2
+Work:Expenses,1
+Work:gas money,1
+Work:owesme,2
+[Checking at Somerset Trust Company],59
+[Chevy Malibu 2010 Loan],36
+[Chevy Malibu 2010],2
+[Ford Tarus 2002],2
+[Laptop Warranty],1
+[Line of Credit at Utilities Employees C],36
+[MONEY MARKET SAVINGS],24
+[Preferred Checking at Wells Fargo Bank],50
+[Savings at Wells Fargo Bank],3
+[SHARE ACCOUNT],2
+[TRADITIONAL IRA XX6918],1
+[Traditional IRA@UECU],1
+[Unspecified Account],18
+[Way 2 Savings at Wells Fargo],51
+_DivInc,46
+_LT CapGnDst,2
+_RlzdGain,17
+_ST CapGnDst,1

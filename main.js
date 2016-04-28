@@ -1,27 +1,37 @@
+var async = require('async');
 var Converter = require('csvtojson').Converter;
 var converter = new Converter({});
 var _ = require('underscore');
 
 var fs = require('fs');
 
-converter.on("end_parsed", function(json_Array) {
-	var arr = ['tools', 'visa', 'disco']
-	var result = _(json_Array).select(function(tag) { return tag.tag; } );
-	var plucked = _(json_Array).pluck('tag').map(function (value) {return value;});
+/*fs.createReadStream("csv/tags.csv").pipe(converter);*/
 
-	// An object to store our results in...
-	var allofm = {};
+var files = ['csv/tags.csv','csv/categories.csv'];
+var readStreams = [];
 
-	// Store our results
-	allofm['diffLeft'] = _.difference(plucked, arr);  // What didn't match in plucked
-	allofm['diffRight'] = _.difference(arr, plucked); // What didn't match in arr
-	allofm['common'] =  _.intersection(plucked, arr); // What matched in both (INNER JOIN)
-
-	// Display results using "map() for Objects"
-	_.mapObject(allofm, function(val, key) {
-		console.log(key + ':' + val.length);
+files.forEach(function( file ) {
+	readStreams.push(function(callback) {
+		var converter = new Converter({});
+		fs.createReadStream( file )
+		  .pipe(converter)
+		  .on('end_parsed', function(jsonArray) {
+			callback(null, jsonArray);
+		   });
 	});
-
 });
 
-fs.createReadStream("csv/tags.csv").pipe(converter);
+async.parallel(readStreams, function(err, results) {
+	var tags = _.pluck(results[0], 'tag');
+	var cats = _.pluck(results[1], 'Category');
+
+	var catsTail = _.map(cats, function(cat) { return _.last(cat.split(":")).toLowerCase(); });
+	var moreThanOneTag = _.filter(tags, function(tag) { return _.size(tag.split(":")) > 1; });
+	var oneTag = _.filter(tags, function(tag) { return _.size(tag.split(":")) == 1; });
+
+	var x = [];
+
+	_.map(moreThanOneTag, function(t) { x = _.union(t.split(":"), x); });
+
+	console.log(x);
+});

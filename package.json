@@ -9,7 +9,8 @@
 	},
 	"dependencies": {
 		"csvtojson": "0.5.x",
-		"underscore": "1.8.x"
+		"underscore": "1.8.x",
+		"async": "1.5.2"
 	},
 	"license": "MIT"
 }

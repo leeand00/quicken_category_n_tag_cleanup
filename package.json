@@ -1,0 +1,15 @@
+{
+	"name": "quicken-category-tag-cleanup",
+	"version": "0.0.1",
+	"description": "Exported \"All Transacitons\" from all time from 11 years of using Quicken.  Then imported it into MySQL and counted the number of transactions in each category and in each tag.  I need to use this script to determine which categories are redundant.  I've determined that I've been misusing the category/tagging system all along and that I need to use the category structure more like a folder system, and tag the names of members of my family for which transactions belong to them, for purposes of expense tracking on a per-family-member, per-categoy basis; and for budgeting later on.  Some tags may be in non-existant categories, or vise versa, and I'm going to try and use this script to determine how to recategorize the transactions.",
+	"author": "Andrew J. Leer <leeand00@hotmail.com>",
+	"private": true,
+	"scripts": {
+		"start": "node main.js"
+	},
+	"dependencies": {
+		"csvtojson": "0.5.x",
+		"underscore": "1.8.x"
+	},
+	"license": "MIT"
+}

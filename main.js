@@ -26,6 +26,10 @@ async.parallel(readStreams, function(err, results) {
 	var tags = _.pluck(results[0], 'tag');
 	var cats = _.pluck(results[1], 'Category');
 
+	// Make these all lowercase.
+	tags = _.map(tags, function(tag) { return tag.toLowerCase(); });
+	cats = _.map(cats, function(cat) { return cat.toLowerCase(); });
+
 	// Find the category name for every category...
 	// Categories are heirarchical almost like directories seperated by a ":" instead of a "\"
 	// So here we take only the last category in the path...flattening the directory structure.
@@ -40,9 +44,6 @@ async.parallel(readStreams, function(err, results) {
 	// list.
 	var moreThanOneTag = _.filter(tags, function(tag) { return _.size(tag.split(":")) > 1; });
 	var oneTag = _.filter(tags, function(tag) { return _.size(tag.split(":")) == 1; });
-
-	// Make oneTag Lowercase
-	oneTag = _.map(oneTag, function(aTag) { return aTag.toLowerCase(); });
 
 	var x = []; // temp array for determining unqiue tags.
 	var uniqueTags = [];
@@ -63,7 +64,7 @@ async.parallel(readStreams, function(err, results) {
 
 	// Output the rest of the infomration so we can look at our result:
 	console.log("Tags that do not have an equivalent category:");
-	console.log(z);
+	console.log(_.sortBy(z, function(str) {return str;}));
 
 	console.log("Number of Tags that do not have an equivalent category: (result): " + z.length);
 	console.log("Number of Categories that do not have an equivalent tag (don\'t care): " + a.length);
@@ -74,5 +75,36 @@ async.parallel(readStreams, function(err, results) {
 	// Print out the total number of tags from each.
 	console.log("Number of Unique Tags: " + uniqueTags.length);
 	console.log("Number of Unique Categories: " + catsTail.length);
+
+	// Find Duplicate Categories
+ 	var duplicateCategories = _.filter(_.pairs(_.countBy(catsTail, function(cat) { return cat; })), function(arr) { return arr[1] > 1 } )
+
+	console.log("---------------------------------------");
+
+	// Print the Duplicate Categories and their counts.
+	console.log("Duplicate Categories and Counts: ");
+	console.log(duplicateCategories);
+
+	// obtain an array of only the categories and store it in i.	
+	var i = _.map(duplicateCategories, function(dupCat) { return dupCat[0]; });
+
+	console.log("---------------------------------------");
+	console.log("Paths to duplicate categories:");
+
+	// zip the last category name and the path
+	// (since one was derived from the other we can zip them together) 
+	var pathNLastNode = _.zip(catsTail, cats);
+
+	// Perform an INNER JOIN between the two matching on the duplicate cateogry
+	// name so we can see the path
+	var rs = [];
+	
+	rs = _.filter(pathNLastNode, function(item) {
+		//console.log(item[0]);
+		return (_.findIndex(i, function(ie) { return (ie == item[0]); })) != -1;
+	});
+
+	console.log(_.sortBy(rs, function(item) { return item[0]; }));
+	console.log("Count: " + _.size(rs));
 
 });
